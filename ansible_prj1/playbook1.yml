@@ -1,19 +1,5 @@
 ---
 - hosts: all
   become: true #play will run as root user
-  tasks: 
-    - name: Install apache httpd
-      ansible.builtin.apt:
-        name: apache2
-        state: present #present means install
-        update_cache: yes 
-    - name: Copy file with owner and permissions
-      ansible.builtin.copy:
-        src: index.html #becuase index.html is in the same location as playbook stays
-        dest: /var/www/html
-        owner: root
-        group: root
-        mode: '0644'
-
-
-
+  roles:
+    - httpd

@@ -1,0 +1,195 @@
+Script started on 2026-02-18 13:19:46+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="103" LINES="40"]
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ ansible-galaxy role install bsmeding.docker
+[?2004lStarting galaxy role install process
+- downloading role 'docker', owned by bsmeding
+- downloading role from https://github.com/bsmeding/ansible_role_docker/archive/1.0.32.tar.gz
+- extracting bsmeding.docker to /home/azureuser/.ansible/roles/bsmeding.docker
+- bsmeding.docker (1.0.32) was installed successfully
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ cat guidelines.txt 
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ cat guidelines.txt 
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ exit
+[?2004lexit
+
+Script done on 2026-02-18 13:23:05+00:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-02-18 13:23:34+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="103" LINES="40"]
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ cd ..
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projectsazureuser@vm-central-1:~/ansible-projects$ cd ansible_prj1
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ ls
+[?2004lansible.cfg  [0m[01;36mconfig[0m  gitcommands.txt  [01;34mhttpd[0m  inventory.ini  playbook1.yml
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cp ansible.cfg ../ansible_prj2
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cp ansible.cfg ../ansible_prj2[C[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2c ../ansible_prj2o ../ansible_prj2n ../ansible_prj2f ../ansible_prj2i ../ansible_prj2g ../ansible_prj2
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cp config ../ansible_prj2[C[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2i ../ansible_prj2n ../ansible_prj2v ../ansible_prj2e ../ansible_prj2n ../ansible_prj2t ../ansible_prj2o ../ansible_prj2r ../ansible_prj2y ../ansible_prj2. ../ansible_prj2i ../ansible_prj2n ../ansible_prj2i ../ansible_prj2
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cp inventory.ini ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2[1P ../ansible_prj2p ../ansible_prj2l ../ansible_prj2a ../ansible_prj2y ../ansible_prj2b ../ansible_prj2o ../ansible_prj2o ../ansible_prj2k ../ansible_prj2. ../ansible_prj2y ../ansible_prj2m ../ansible_prj2l ../ansible_prj2
+[?2004lcp: cannot stat 'playbook.yml': No such file or directory
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cp playbook.yml ../ansible_prj2[1@1
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cd ..
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projectsazureuser@vm-central-1:~/ansible-projects$ cd ansible_prj2
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ ls
+[?2004lansible.cfg  config  guidelines.txt  inventory.ini  playbook1.yml
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ vim docekr[K[K[Kker-playbook.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;40r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[40;1H"docker-playbook.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                      [3;1H~                                                                                                      [4;1H~                                                                                                      [5;1H~                                                                                                      [6;1H~                                                                                                      [7;1H~                                                                                                      [8;1H~                                                                                                      [9;1H~                                                                                                      [10;1H~                                                                                                      [11;1H~                                                                                                      [12;1H~                                                                                                      [13;1H~                                                                                                      [14;1H~                                                                                                      [15;1H~                                                                                                      [16;1H~                                                                                                      [17;1H~                                                                                                      [18;1H~                                                                                                      [19;1H~                                                                                                      [20;1H~                                                                                                      [21;1H~                                                                                                      [22;1H~                                                                                                      [23;1H~                                                                                                      [24;1H~                                                                                                      [25;1H~                                                                                                      [26;1H~                                                                                                      [27;1H~                                                                                                      [28;1H~                                                                                                      [29;1H~                                                                                                      [30;1H~                                                                                                      [31;1H~                                                                                                      [32;1H~                                                                                                      [33;1H~                                                                                                      [34;1H~                                                                                                      [35;1H~                                                                                                      [36;1H~                                                                                                      [37;1H~                                                                                                      [38;1H~                                                                                                      [39;1H~                                                                                                      [m[40;86H0,0-1[9CAll[1;1H[?25h[?4m[?12$p[?25l[40;76H-[1;1H[40;76H [1;1H[?25h[?25l[40;76H-[1;1H[40;76H [1;1H[?25h[?25l[40;76H-[1;1H[40;76H [1;1H[?25h[?25l[40;76Hi[1;1H[40;76H [1;1H[40;1H[1m-- INSERT --[m[40;13H[K[40;86H0,1[11CAll[1;1H[?25h[?25l-[40;86H1,2[1;2H[?25h[?25l-[40;88H3[1;3H[?25h[?25l[35m---[m[40;88H4[1;4H[?25h[?25l[2;1H[K[40;86H2,1[2;1H[?25h[?25l-[40;88H2[2;2H[?25h[?25l[33m- [m[40;88H3[2;3H[?25h[?25lh[40;88H4[2;4H[?25h[?25lo[40;88H5[2;5H[?25h[?25ls[40;88H6[2;6H[?25h[?25lt[40;88H7[2;7H[?25h[?25ls[40;88H8[2;8H[?25h[?25l[2;3H[36mhosts[m[35m:[m[40;88H9[2;9H[?25h[?25l[40;88H10[2;10H[?25h[?25la[40;89H1[2;11H[?25h[?25ll[40;89H2[2;12H[?25h[?25ll[40;89H3[2;13H[?25h[?25l
+  [3;3H[K[40;86H3,3 [3;3H[?25h[?25lb[40;88H4[3;4H[?25h[?25le[40;88H5[3;5H[?25h[?25lc[40;88H6[3;6H[?25h[?25lo[40;88H7[3;7H[?25h[?25lm[40;88H8[3;8H[?25h[?25le[40;88H9[3;9H[?25h[?25l  [36mbecome[m[35m:[m[40;88H10[3;10H[?25h[?25l[40;89H1[3;11H[?25h[?25lt[40;89H2[3;12H[?25h[?25lr[40;89H3[3;13H[?25h[?25lu[40;89H4[3;14H[?25h[?25l[31mtrue[m[40;89H5[3;15H[?25h[?25l
+    [4;5H[K[40;86H4,5 [4;5H[?25h[?25l[40;88H3[4;3H[?25h[?25lr[40;88H4[4;4H[?25h[?25lo[40;88H5[4;5H[?25h[?25ll[40;88H6[4;6H[?25h[?25le[40;88H7[4;7H[?25h[?25ls[40;88H8[4;8H[?25h[?25l  [36mroles[m[35m:[m[40;88H9[4;9H[?25h[?25l
+    [5;5H[K[40;86H5,5[5;5H[?25h[?25l-[40;88H6[5;6H[?25h[?25l[33m- [m[40;88H7[5;7H[?25h[?25lb[40;88H8[5;8H[?25h[?25ls[40;88H9[5;9H[?25h[?25lm[40;88H10[5;10H[?25h[?25le[40;89H1[5;11H[?25h[?25ld[40;89H2[5;12H[?25h[?25li[40;89H3[5;13H[?25h[?25ln[40;89H4[5;14H[?25h[?25lg[40;89H5[5;15H[?25h[?25l.[40;89H6[5;16H[?25h[?25ld[40;89H7[5;17H[?25h[?25lo[40;89H8[5;18H[?25h[?25lc[40;89H9[5;19H[?25h[?25lk[40;88H20[5;20H[?25h[?25le[40;89H1[5;21H[?25h[?25lr[40;89H2[5;22H[?25h[40;1H[K[5;21H[?25l[40;76H^[[5;21H[40;76H  [5;22H[40;86H5,21[10CAll[5;21H[?25h[?25l[40;76H:[5;21H[40;76H[K[40;1H:[?25hwq[?25l[?2004l[>4;m"docker-playbook.yaml" [New] 5L, 63B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ ansible-playbook -i inventory.ini docker-playbook.yaml 
+[?2004l
+PLAY [all] ********************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Load OS-specific vars.] *******************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure group "docker" exists] *************************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : set docker user] **************************************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : get the username] *************************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Add current user to docker users group variable] ******************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Creates directory for proxy file (older version before 23)] *******************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Set docker http-proxy.conf (older version before 23)] *************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Include tasks for RedHat] *****************************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Include tasks for Debian] *****************************************************
+[0;36mincluded: /home/azureuser/.ansible/roles/bsmeding.docker/tasks/setup-Debian.yml for vm-26-feb-1[0m
+
+TASK [bsmeding.docker : Ensure apt key is not present in trusted.gpg.d] *******************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure old apt source list is not present in /etc/apt/sources.list.d] *********
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure the repo referencing the previous trusted.gpg.d key is not present] ****
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure old apt source list is not present in /etc/apt/sources.list.d/docker.list] ***
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Check whether legacy docker.list references the official Docker repo] *********
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Remove legacy docker.list if it does not reference the official Docker repo] ***
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure old versions of Docker are not installed.] *****************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure dependencies are installed.] *******************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure directory exists for /etc/apt/keyrings] ********************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Add Docker apt key.] **********************************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure curl is present (on older systems without SNI).] ***********************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Add Docker apt key (alternative for older systems without SNI).] **************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Add Docker repository.] *******************************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Install Python Docker library for Debian/Ubuntu] ******************************
+[0;33mchanged: [vm-26-feb-1] => (item={'name': 'python3-docker'})[0m
+
+TASK [bsmeding.docker : Ensure group "docker" exists] *************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Install Docker packages.] *****************************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Install Docker packages (with downgrade option).] *****************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Install docker-compose plugin.] ***********************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Install docker-compose-plugin (with downgrade option).] ***********************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure /etc/docker/ directory exists.] ****************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Configure Docker daemon options.] *********************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Reload systemd daemon to recognize new services] ******************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Check if Docker service exists using systemctl] *******************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Determine Docker service name from systemctl output] **************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure Docker is started and enabled at boot.] ********************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Ensure handlers are notified now to avoid firewall conflicts.] ****************
+
+RUNNING HANDLER [bsmeding.docker : restart docker] ****************************************************
+[0;33mchanged: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Include tasks for docker-compose] *********************************************
+[0;36mskipping: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Get docker group info using getent.] ******************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Check if there are any users to add to the docker group.] *********************
+[0;32mok: [vm-26-feb-1] => (item=azureuser)[0m
+
+TASK [bsmeding.docker : Include tasks for Docker users] ***********************************************
+[0;36mincluded: /home/azureuser/.ansible/roles/bsmeding.docker/tasks/docker-users.yml for vm-26-feb-1[0m
+
+TASK [bsmeding.docker : Ensure docker users are added to the docker group.] ***************************
+[0;33mchanged: [vm-26-feb-1] => (item=azureuser)[0m
+
+TASK [bsmeding.docker : Reset ssh connection to apply user changes.] **********************************
+
+TASK [bsmeding.docker : get docker uid] ***************************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+TASK [bsmeding.docker : Save UID] *********************************************************************
+[0;32mok: [vm-26-feb-1][0m
+
+PLAY RECAP ********************************************************************************************
+[0;33mvm-26-feb-1[0m                : [0;32mok=29  [0m [0;33mchanged=10  [0m unreachable=0    failed=0    [0;36mskipped=14  [0m rescued=0    ignored=0   
+
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ ls
+[?2004lansible.cfg  config  docker-playbook.yaml  guidelines.txt  inventory.ini  playbook1.yml
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ rm playbook1.yml 
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ ls
+[?2004lansible.cfg  config  docker-playbook.yaml  guidelines.txt  inventory.ini
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj2azureuser@vm-central-1:~/ansible-projects/ansible_prj2$ cd ..
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projectsazureuser@vm-central-1:~/ansible-projects$ ls
+[?2004l[0m[01;34mansible_prj1[0m  [01;34mansible_prj2[0m
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projectsazureuser@vm-central-1:~/ansible-projects$ cd ansible_prj1
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cd a[Khttpd/
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1/httpdazureuser@vm-central-1:~/ansible-projects/ansible_prj1/httpd$ cd ..[K[K[K[K[Kcd ..
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ pwd
+[?2004l/home/azureuser/ansible-projects/ansible_prj1
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ ls
+[?2004lansible.cfg  [0m[01;36mconfig[0m  gitcommands.txt  [01;34mhttpd[0m  inventory.ini  playbook1.yml
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansible-projects/ansible_prj1$ cd httpd/
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1/httpdazureuser@vm-central-1:~/ansible-projects/ansible_prj1/httpd$ pwd
+[?2004l/home/azureuser/ansible-projects/ansible_prj1/httpd
+[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1/httpdazureuser@vm-central-1:~/ansible-projects/ansible_prj1/httpd$ cd ..
+[?2004l[?2004h]0;azureuser@vm-central-1: ~/ansible-projects/ansible_prj1azureuser@vm-central-1:~/ansibl
+ansible-galaxy import wanniarachchichaluka ansible-role-httpd --token <api-tocken>
+
