@@ -1,0 +1,17 @@
+---
+- hosts: localhost #localhost means we are running on the same machine
+  connection: local #playbook has to be executed on the same machine.
+  roles:
+   - vm
+  tasks:
+  - name: Create VM with defaults
+    azure_rm_virtualmachine:
+      resource_group: myResourceGroup
+      name: testvm10
+      admin_username: "{{ username }}"
+      admin_password: "{{ password }}"
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.1'
+        version: latest
