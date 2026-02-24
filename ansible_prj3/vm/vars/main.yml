@@ -1,2 +1,5 @@
 ---
 # vars file for vm
+username: azureuser
+password: "abcdefd#&6432(&f"
+vm_size: Standard_B1s

@@ -1,2 +1,65 @@
 ---
 # tasks file for vm
+- name: Create the Resource group
+  azure_rm_resourcegroup:
+    name: ansibleresourcegroup
+    location: "{{ location  }}"
+    auth_source: msi
+    #or if using azure service principal instead of managed identity, each task should contain:
+    #auth_source: "{{ auth_source }}"
+    #subscription_id: "{{ azure_subscription_id }}"
+    #client_id: "{{ azure_client_id }}"
+    #secret: "{{ azure_secret }}"
+    #tenant: "{{ azure_tenant }}"
+
+- name: Create Virtual network
+  azure_rm_virtualnetwork:
+    resource_group: ansibleresourcegroup
+    name: ansiblevnet
+    address_prefixes: "10.0.0.0/16"
+    auth_source: msi
+
+- name: Create subnet
+  azure_rm_subnet:
+    resource_group: ansibleresourcegroup
+    name: ansiblesubnet
+    virtual_network: ansiblevnet
+    address_prefix: "10.0.1.0/24"
+    auth_source: msi
+
+- name: Create public IP address
+  azure_rm_publicipaddress:
+    resource_group: ansibleresourcegroup
+    name: ansiblepublicip
+    sku: Standard
+    allocation_method: Static
+    auth_source: msi
+
+- name: Create network interface
+  azure_rm_networkinterface:
+    resource_group: ansibleresourcegroup
+    name: ansiblenic
+    virtual_network: ansiblevnet
+    subnet: ansiblesubnet
+    ip_configurations: 
+      - name: ipconfig1
+        public_ip_address_name: ansiblepublicip
+        primary: True
+    auth_source: msi
+
+- name: Create VM with defaults
+  azure_rm_virtualmachine:
+    resource_group: ansibleresourcegroup
+    name: ansiblevm
+    admin_username: "{{ username }}"
+    admin_password: "{{ password }}"
+    network_interfaces: ansiblenic
+    managed_disk_type: Standard_LRS
+    image:
+      offer: ubuntu-24_04-lts 
+      publisher: canonical
+      sku: server
+      version: latest
+    vm_size: "{{ vm_size }}"
+    auth_source: msi
+

@@ -1,0 +1,13 @@
+# Ansible vault password file
+ansible_prj3/vault.pass
+*.pass
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Ansible retry files
+*.retry
+
+# Log files
+ansible_prj3/termonal_log.txt

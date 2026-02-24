@@ -1,17 +1,13 @@
 ---
 - hosts: localhost #localhost means we are running on the same machine
   connection: local #playbook has to be executed on the same machine.
+  vars:
+    auth_source: msi
+    #if using azure service principal instead of managed identity, add below after editing each tasks:
+  #vars:
+    #auth_source: env
+  #vars_files:
+    #- group_vars/all/pass.yml
   roles:
    - vm
-  tasks:
-  - name: Create VM with defaults
-    azure_rm_virtualmachine:
-      resource_group: myResourceGroup
-      name: testvm10
-      admin_username: "{{ username }}"
-      admin_password: "{{ password }}"
-      image:
-        offer: CentOS
-        publisher: OpenLogic
-        sku: '7.1'
-        version: latest
+
