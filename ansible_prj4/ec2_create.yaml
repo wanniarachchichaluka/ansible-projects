@@ -1,0 +1,24 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: Create EC2 instances
+    amazon.aws.ec2_instance:
+      name: "{{ item.name }}"
+      key_name: "ansible-test-key-pair-rsa"
+      instance_type: t2.micro
+      security_group: default
+      region: ap-south-1
+      aws_access_key: "{{ec2_access_key}}" 
+      aws_secret_key: "{{ec2_secret_key}}"
+      network:
+        assign_public_ip: true
+      image_id: "{{ item.image }}"
+      tags:
+        environment: "{{ item.name }}"
+    loop:
+      - { image: "ami-051a31ab2f4d498f5", name: "ansible-node-1-test"}
+      - { image: "ami-019715e0d74f695be", name: "ansible-node-2-test"}
+      - { image: "ami-019715e0d74f695be", name: "ansible-node-3-test"}
+    

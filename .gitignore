@@ -1,6 +1,21 @@
-# Ansible vault password file
-ansible_prj3/vault.pass
+# Ansible vault password files - NEVER COMMIT THESE!
 *.pass
+*.vault
+vault.pass
+.vault_pass
+password.txt
+.secret
+
+# Ignore vault password files in any project directory
+*/vault.pass
+*/*/vault.pass
+
+# Log files in any project
+*terminal_log.txt
+*termonal_log.txt
+*.log
+*/terminal_log.txt
+*/termonal_log.txt
 
 # Python cache files
 __pycache__/
@@ -9,5 +24,15 @@ __pycache__/
 # Ansible retry files
 *.retry
 
-# Log files
-ansible_prj3/termonal_log.txt
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SSH keys (if any accidentally copied)
+*.pem
+*.ppk
+
