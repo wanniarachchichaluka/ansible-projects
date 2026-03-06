@@ -1,0 +1,30 @@
+---
+- hosts: managed_nodes
+  become: true
+  vars:
+    ansible_python_interpreter: auto
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+        cache_valid_time: 3600
+    - name: Make sure the packages openssh and openssl are up to date
+      ansible.builtin.apt:
+        name: "{{ item  }}"
+        state: latest
+      loop:
+        - openssh
+        - openssl
+      ignore_errors: yes
+    - name: Verify if Docker is installed
+      ansible.builtin.command: docker --version
+      register: output #the output of above command will be saved to register variable
+      ignore_errors: yes
+#    - ansible.builtin.debug:
+#        var: output
+    - name: Install Docker
+      ansible.builtin.apt:
+        name: docker.io
+        state: present
+      when:
+        output.failed
